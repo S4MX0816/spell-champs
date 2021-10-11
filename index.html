@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>Spell Champs</title>
+  </head>
+  <body>
+    <div class="input-bay">
+      <span>Class</span>
+      <input type="text" />
+      <span>Week</span>
+      <input type="text" />
+      <span>Month</span>
+      <input type="text" />
+      <span>English</span>
+      <textarea cols="30" rows="10"></textarea>
+      <button onclick="generate(true,event)">Generate</button>
+      <span>Hindi</span>
+      <textarea cols="30" rows="10"></textarea>
+      <button onclick="generate(false,event)">Generate</button>
+    </div>
+    <div class="pdf-main">
+      <div class="test-paper pdf t0">
+        <p>Generated using Automated Spell Champs Generator</p>
+        <div class="data d0">
+          <div class="first">
+            <img src="/assets/img/header english.png" />
+          </div>
+          <div class="second">
+            <div><img class="left" src="/assets/img/bee.png" /></div>
+            <div class="center">
+              <p>word Bee Winners</p>
+              <p class="grade">Grade -</p>
+            </div>
+            <div><img class="right" src="/assets/img/bee.png" /></div>
+          </div>
+          <div class="table-data0"></div>
+        </div>
+      </div>
+      <div class="test-paper pdf t0">
+        <p>Generated using Automated Spell Champs Generator</p>
+        <div class="data d0">
+          <div class="first">
+            <img src="/assets/img/header hindi.png" />
+          </div>
+          <div class="second">
+            <div><img class="left" src="/assets/img/bee.png" /></div>
+            <div class="center">
+              <p>शब्द सरताज</p>
+              <p class="grade">कक्षा –</p>
+            </div>
+            <div><img class="right" src="/assets/img/bee.png" /></div>
+          </div>
+          <div class="table-data1"></div>
+        </div>
+      </div>
+    </div>
+    <script defer src="/assets/js/script.js"></script>
+  </body>
+</html>
