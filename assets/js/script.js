@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll("input");
 const grades = document.querySelectorAll(".grade");
+const pdfDiv = document.querySelector(".pdf-main");
 
 const generate = function (handler, event) {
   grades[0].innerText = `Grade – ${inputs[0].value}`;
@@ -32,4 +33,25 @@ const generate = function (handler, event) {
   }
   html += `</table>`;
   element.innerHTML = html;
+};
+
+const generatePDF = function () {
+  const filename = inputs[0].value
+    ? `Grade – ${inputs[0].value}.pdf`
+    : `myFile.pdf`;
+  html2pdf()
+    .set({
+      margin: [0, 0],
+      filename,
+      image: { type: "jpeg", quality: 1 },
+      pagebreak: { mode: "avoid-all", after: ".pdf" },
+      html2canvas: { scale: 4, letterRendering: true },
+      jsPDF: {
+        unit: "in",
+        format: "a4",
+        orientation: "portrait",
+      },
+    })
+    .from(pdfDiv)
+    .save();
 };

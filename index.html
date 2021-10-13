@@ -21,7 +21,7 @@
       <span>Hindi</span>
       <textarea cols="30" rows="10"></textarea>
       <button onclick="generate(false,event)">Generate</button>
-      <button>Generate PDF</button>
+      <button onclick="generatePDF()">Generate PDF</button>
     </div>
     <div class="pdf-main">
       <div class="test-paper pdf t0">
@@ -59,6 +59,7 @@
         </div>
       </div>
     </div>
+    <script defer src="assets/js/html2pdf.bundle.min.js"></script>
     <script defer src="assets/js/script.js"></script>
   </body>
 </html>
