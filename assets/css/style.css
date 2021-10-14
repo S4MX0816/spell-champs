@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 45px;
+  position: sticky;
 }
 
 input {

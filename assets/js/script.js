@@ -1,6 +1,18 @@
 const inputs = document.querySelectorAll("input");
 const grades = document.querySelectorAll(".grade");
+const inputBay = document.querySelector(".input-bay");
 const pdfDiv = document.querySelector(".pdf-main");
+
+const init = function () {
+  stickyBay();
+};
+
+const stickyBay = function () {
+  const offset =
+    document.documentElement.clientHeight -
+    inputBay.getBoundingClientRect().height;
+  inputBay.style.top = `${offset}px`;
+};
 
 const generate = function (handler, event) {
   grades[0].innerText = `Grade – ${inputs[0].value}`;
@@ -55,3 +67,6 @@ const generatePDF = function () {
     .from(pdfDiv)
     .save();
 };
+
+init();
+window.addEventListener("resize", stickyBay);
