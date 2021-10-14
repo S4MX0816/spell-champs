@@ -70,3 +70,17 @@ const generatePDF = function () {
 
 init();
 window.addEventListener("resize", stickyBay);
+document.querySelectorAll("textarea").forEach((el) => {
+  let beforeHeight, beforeWidth, afterHeight, afterWidth;
+  el.addEventListener("mousedown", (el) => {
+    beforeHeight = el.target.getBoundingClientRect().height;
+    beforeWidth = el.target.getBoundingClientRect().width;
+  });
+
+  el.addEventListener("mouseup", (el) => {
+    afterHeight = el.target.getBoundingClientRect().height;
+    afterWidth = el.target.getBoundingClientRect().width;
+
+    if (beforeHeight !== afterHeight || beforeWidth !== afterWidth) stickyBay();
+  });
+});
