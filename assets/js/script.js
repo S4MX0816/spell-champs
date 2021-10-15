@@ -15,6 +15,10 @@ const stickyBay = function () {
   inputBay.style.top = `${offset < 0 ? offset : 45}px`;
 };
 
+const clearInputs = function (handler) {
+  textareas[handler ? 0 : 1].value = "";
+};
+
 const generate = function (handler) {
   grades[0].innerText = `Grade – ${inputs[0].value}`;
   grades[1].innerText = `कक्षा – ${inputs[0].value}`;
