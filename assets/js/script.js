@@ -2,6 +2,7 @@ const inputs = document.querySelectorAll("input");
 const grades = document.querySelectorAll(".grade");
 const inputBay = document.querySelector(".input-bay");
 const pdfDiv = document.querySelector(".pdf-main");
+const textareas = document.querySelectorAll("textarea");
 
 const init = function () {
   stickyBay();
@@ -14,10 +15,11 @@ const stickyBay = function () {
   inputBay.style.top = `${offset}px`;
 };
 
-const generate = function (handler, event) {
+const generate = function (handler) {
   grades[0].innerText = `Grade – ${inputs[0].value}`;
   grades[1].innerText = `कक्षा – ${inputs[0].value}`;
-  let x = event.target.previousElementSibling.value.toUpperCase();
+  let x = handler ? textareas[0].value : textareas[1].value;
+  x = x.toUpperCase();
   if (!x) return;
   x = x.split(/,|\n/);
   const y = x
@@ -26,6 +28,7 @@ const generate = function (handler, event) {
       return el.trim();
     })
     .filter((el) => el);
+  y.sort((a, b) => a.localeCompare(b));
 
   const element = document.querySelector(`.table-data${handler ? 0 : 1}`);
   element.innerHTML = "";
@@ -70,7 +73,7 @@ const generatePDF = function () {
 
 init();
 window.addEventListener("resize", stickyBay);
-document.querySelectorAll("textarea").forEach((el) => {
+textareas.forEach((el) => {
   let beforeHeight, beforeWidth, afterHeight, afterWidth;
   el.addEventListener("mousedown", (el) => {
     beforeHeight = el.target.getBoundingClientRect().height;
