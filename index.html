@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Spell Champs</title>
+    <link rel="shortcut icon" href="/assets/img/spell-champs.ico" />
   </head>
   <body>
     <div class="input-bay">
@@ -17,12 +18,19 @@
       <input type="text" />
       <span>English</span>
       <textarea cols="30" rows="10"></textarea>
-      <button onclick="generate(true,event)">Generate</button>
+      <div class="generate">
+        <button onclick="generate(true,event)">Generate</button>
+      </div>
+      <div class="clear"><button>clear</button></div>
       <span>Hindi</span>
       <textarea cols="30" rows="10"></textarea>
-      <button onclick="generate(false,event)">Generate</button>
+      <div class="generate">
+        <button onclick="generate(false,event)">Generate</button>
+      </div>
+      <div class="clear1"><button>clear</button></div>
       <button onclick="generatePDF()">Generate PDF</button>
     </div>
+
     <div class="pdf-main">
       <div class="test-paper pdf t0">
         <p>Generated using Automated Spell Champs Generator</p>
