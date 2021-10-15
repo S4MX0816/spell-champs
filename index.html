@@ -18,16 +18,20 @@
       <input type="text" />
       <span>English</span>
       <textarea cols="30" rows="10"></textarea>
-      <div class="generate">
-        <button onclick="generate(true,event)">Generate</button>
+      <div class="input-buttons">
+        <div class="generate">
+          <button onclick="generate(true,event)">Generate</button>
+        </div>
+        <div class="clear"><button>clear</button></div>
       </div>
-      <div class="clear"><button>clear</button></div>
       <span>Hindi</span>
       <textarea cols="30" rows="10"></textarea>
-      <div class="generate">
-        <button onclick="generate(false,event)">Generate</button>
+      <div class="input-buttons">
+        <div class="generate">
+          <button onclick="generate(false,event)">Generate</button>
+        </div>
+        <div class="clear1"><button>clear</button></div>
       </div>
-      <div class="clear1"><button>clear</button></div>
       <button onclick="generatePDF()">Generate PDF</button>
     </div>
 

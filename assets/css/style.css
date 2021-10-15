@@ -79,6 +79,13 @@ textarea {
 .input-bay button:last-child {
   max-width: 100%;
 }
+
+.input-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .generate button {
   width: 130px;
 }
