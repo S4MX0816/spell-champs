@@ -37,7 +37,7 @@ body {
 
 input {
   background: #fff;
-  color: #000;
+  color: #333;
   border: none;
   text-decoration: none;
   padding: 7px;
@@ -45,7 +45,7 @@ input {
 }
 
 textarea {
-  color: black;
+  color: #333;
   background-color: white;
 }
 
