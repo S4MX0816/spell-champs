@@ -8,7 +8,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 20px 0 0 20px;
   background-color: #008b8b;
 }
 
@@ -93,40 +92,10 @@ textarea {
 .clear button {
   background: #e52d27;
   max-width: 30%;
-  margin: 15px 0;
   padding: 5px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  font-weight: bolder;
-  color: white;
-  box-shadow: 0 0 5px #00fe08;
-  border-radius: 20px;
-  cursor: pointer;
-  border: 2px solid white;
 }
+
 .clear button:hover {
-  background: white;
-  color: #e52d27;
-}
-.clear1 button {
-  background: #e52d27;
-  max-width: 30%;
-  margin: 15px 0;
-  padding: 5px 10px;
-  text-align: center;
-  font-weight: bolder;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 5px #00fe08;
-  border-radius: 20px;
-  cursor: pointer;
-  border: 2px solid white;
-}
-.clear1 button:hover {
   background: white;
   color: #e52d27;
 }

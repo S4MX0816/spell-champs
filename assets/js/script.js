@@ -12,7 +12,7 @@ const stickyBay = function () {
   const offset =
     document.documentElement.clientHeight -
     inputBay.getBoundingClientRect().height;
-  inputBay.style.top = `${offset}px`;
+  inputBay.style.top = `${offset < 0 ? offset : 45}px`;
 };
 
 const generate = function (handler) {
@@ -73,7 +73,11 @@ const generatePDF = function () {
 
 init();
 window.addEventListener("resize", stickyBay);
+
 textareas.forEach((el) => {
+  el.style.minHeight = `${el.getBoundingClientRect().height}px`;
+  el.style.minWidth = `${el.getBoundingClientRect().width}px`;
+  el.style.maxWidth = `${el.getBoundingClientRect().width}px`;
   let beforeHeight, beforeWidth, afterHeight, afterWidth;
   el.addEventListener("mousedown", (el) => {
     beforeHeight = el.target.getBoundingClientRect().height;
