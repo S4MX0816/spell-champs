@@ -1,8 +1,10 @@
 const inputs = document.querySelectorAll("input");
 const grades = document.querySelectorAll(".grade");
+const textareas = document.querySelectorAll("textarea");
+const testPapers = document.querySelectorAll(".test-paper");
+const watermarks = document.querySelectorAll(".watermark");
 const inputBay = document.querySelector(".input-bay");
 const pdfDiv = document.querySelector(".pdf-main");
-const textareas = document.querySelectorAll("textarea");
 
 const init = function () {
   stickyBay();
@@ -55,6 +57,12 @@ const generate = function (handler) {
 };
 
 const generatePDF = function () {
+  watermarks.forEach((el, idx) => {
+    const check = getComputedStyle(el).visibility;
+    if (check === "hidden")
+      el.style.setProperty("visibility", "visible", "important");
+    if (!check) testPapers[idx].insertAdjacentHTML("afterbegin", el.outerHTML);
+  });
   const filename = inputs[0].value
     ? `Grade – ${inputs[0].value}.pdf`
     : `myFile.pdf`;
