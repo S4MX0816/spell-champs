@@ -5,6 +5,7 @@ const testPapers = document.querySelectorAll(".test-paper");
 // const watermarks = document.querySelectorAll(".watermark");
 const inputBay = document.querySelector(".input-bay");
 const pdfDiv = document.querySelector(".pdf-main");
+const headingTexts = document.querySelectorAll("#heading-text");
 
 const init = function () {
   stickyBay();
@@ -103,3 +104,9 @@ textareas.forEach((el) => {
     if (beforeHeight !== afterHeight || beforeWidth !== afterWidth) stickyBay();
   });
 });
+
+const changeHeading = function (radioButton) {
+  const [en, hi] = radioButton.value.split(" ");
+  headingTexts[0].innerText = en;
+  headingTexts[1].innerText = hi;
+};

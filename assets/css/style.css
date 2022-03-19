@@ -44,6 +44,21 @@ input {
   border-radius: 20px;
 }
 
+.selectors {
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+label {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 textarea {
   color: #333;
   background-color: white;

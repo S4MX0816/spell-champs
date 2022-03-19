@@ -16,6 +16,25 @@
       <input type="text" />
       <span>Month</span>
       <input type="text" />
+      <div class="selectors">
+        <input
+          type="radio"
+          id="words"
+          name="selectors"
+          value="Words मधुप"
+          checked
+          onchange="changeHeading(this)"
+        />
+        <label for="words">Words</label>
+        <input
+          type="radio"
+          id="winners"
+          name="selectors"
+          value="Winners सरताज"
+          onchange="changeHeading(this)"
+        />
+        <label for="winners">Winners</label>
+      </div>
       <span>English</span>
       <textarea cols="30" rows="10"></textarea>
       <div class="input-buttons">
@@ -51,7 +70,7 @@
           <div class="second">
             <div><img class="left" src="assets/img/bee.png" /></div>
             <div class="center">
-              <p>Word Bee Winners</p>
+              <p>Word Bee <x id="heading-text">Words</x></p>
               <p class="grade">Grade -</p>
             </div>
             <div><img class="right" src="assets/img/bee.png" /></div>
@@ -70,7 +89,7 @@
           <div class="second">
             <div><img class="left" src="assets/img/bee.png" /></div>
             <div class="center">
-              <p>शब्द सरताज</p>
+              <p>शब्द <x id="heading-text">मधुप</x></p>
               <p class="grade">कक्षा –</p>
             </div>
             <div><img class="right" src="assets/img/bee.png" /></div>
